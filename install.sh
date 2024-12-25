@@ -26,13 +26,6 @@ git clone https://github.com/badorius/myarch.git
 # Navigate to the cloned directory
 cd myarch
 
-
-# Check if tmp/yay exist
-if [ -d "tmp/yay" ]; then
-  echo "Deleting tmp/yay..."
-  rm -rf tmp/yay
-fi
-
 # Installing yay
 echo "Installing yay from GITHUB..."
 git clone https://aur.archlinux.org/yay.git tmp/yay
@@ -41,7 +34,7 @@ makepkg -si --noconfirm
 rm -rf tmp/yay
 # Run the Ansible playbook (optional)
 
-if [ -f playbook.yml ]; then
+if [ -f myarch/playbook.yml ]; then
     echo "Running the Ansible playbook..."
     ansible-playbook -i inventory playbook.yml --ask-become-pass
 else
