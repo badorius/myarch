@@ -5,7 +5,7 @@ set -e
 
 # Install required packages
 echo "Installing basic packages..."
-sudo pacman -Sy --noconfirm pacman-contrib reflector git ansible
+sudo pacman -Sy --noconfirm pacman-contrib reflector git ansible base-devel
 
 # Update mirrors for optimal speedecho "Actualizando mirrors..."
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
@@ -19,6 +19,12 @@ git clone https://github.com/badorius/myarch.git
 
 # Navigate to the cloned directory
 cd myarch
+
+# Installing yay
+echo "Installing yay from GITHUB..."
+git clone https://aur.archlinux.org/yay.git tmp/yay
+cd tmp/yay
+makepkg -si --noconfirm
 
 # Run the Ansible playbook (optional)
 
