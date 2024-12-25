@@ -25,7 +25,7 @@ echo "Installing yay from GITHUB..."
 git clone https://aur.archlinux.org/yay.git tmp/yay
 cd tmp/yay
 makepkg -si --noconfirm
-
+rm -rf tmp/yay
 # Run the Ansible playbook (optional)
 
 if [ -f playbook.yml ]; then
