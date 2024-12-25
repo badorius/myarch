@@ -8,7 +8,7 @@ echo "Installing basic packages..."
 sudo pacman -Sy --noconfirm pacman-contrib reflector git ansible base-devel
 
 # Update mirrors for optimal speedecho "Actualizando mirrors..."
-reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Update the base system
 sudo pacman -Syu --noconfirm
