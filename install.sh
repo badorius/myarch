@@ -3,6 +3,12 @@
 # Exit if any error occurs
 set -e
 
+# Check if tmp/yay exist
+if [ -d "myarch" ]; then
+  echo "Deleting myarch directory..."
+  rm -rf myarch
+fi
+
 # Install required packages
 echo "Installing basic packages..."
 sudo pacman -Sy --noconfirm pacman-contrib reflector git ansible base-devel
