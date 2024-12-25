@@ -5,13 +5,13 @@ set -e
 
 # Install required packages
 echo "Installing basic packages..."
-pacman -Sy --noconfirm pacman-contrib reflector git ansible
+sudo pacman -Sy --noconfirm pacman-contrib reflector git ansible
 
 # Update mirrors for optimal speedecho "Actualizando mirrors..."
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Update the base system
-pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 
 # Clone the configuration repository
 echo "Clonando el repositorio..."
