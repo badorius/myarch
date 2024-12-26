@@ -50,14 +50,14 @@ sudo rm -rf $HDIR/tmp/yay
 
 if [ -f $PDIR/install_pacman_pkg.yml ]; then
     echo "Running the Ansible playbook..."
-    ansible-playbook -i inventory $PDIR/main_playbook.yml --ask-become-pass
+    ansible-playbook -i inventory $PDIR/install_pacman_pkg.yml --ask-become-pass
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
 
 if [ -f $PDIR/install_aur_pkg.yml ]; then
     echo "Running the Ansible playbook..."
-    ansible-playbook -i inventory $PDIR/main_playbook.yml
+    ansible-playbook -i inventory $PDIR/install_aur_pkg.yml
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
