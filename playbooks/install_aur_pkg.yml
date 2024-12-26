@@ -1,0 +1,37 @@
+---
+- name: Configuración inicial de Arch Linux
+  hosts: localhost
+
+  vars:
+    yay_packages:
+      - android-studio
+      - burpsuite
+      - fern-wifi-cracker
+      - gobuster
+      - google-chrome
+      - hash-identifier
+      - kitty-gruvbox-theme-git
+      - libretro-fuse-git
+      - maltego
+      - myip
+      - responder
+      - rockyou
+      - rofi-theme-launcher-1080p
+      - rofi-theme-used
+      - ruby-evil-winrm
+      - seclists
+      - sherlock-git
+      - sublime-text-4
+      - tempus-themes-kitty-git
+      - tiger
+      - ttf-font-icons
+      - ttf-meslo-nerd-font-powerlevel10k
+      - weylus-bin
+      - whatweb
+      - yay
+      - zsh-theme-powerlevel10k-git
+
+    - name: Instalar paquetes de AUR con yay
+      command: >
+        yay -S --noconfirm {{ item }}
+      with_items: "{{ yay_packages }}"
