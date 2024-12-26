@@ -3,10 +3,14 @@
 # Exit if any error occurs
 set -e
 
-# Check if tmp/yay exist
+#ADD PATH VARS
+WDIR=$(pwd)
+HDIR=${WDIR}/myarch
+
+# Check if myarch exist
 if [ -d "myarch" ]; then
   echo "Deleting myarch directory..."
-  rm -rf myarch
+  rm -rf $WDIR/myarch
 fi
 
 # Install required packages
@@ -20,21 +24,20 @@ sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syu --noconfirm
 
 # Clone the configuration repository
-echo "Clonando el repositorio..."
+echo "Cloning myarch repo..."
 git clone https://github.com/badorius/myarch.git 
 
-# Navigate to the cloned directory
-cd myarch
 
 # Installing yay
 echo "Installing yay from GITHUB..."
-git clone https://aur.archlinux.org/yay.git tmp/yay
-cd tmp/yay
+git clone https://aur.archlinux.org/yay.git $HDIR/tmp/yay
+cd $HDIR/tmp/yay
 makepkg -si --noconfirm
-rm -rf tmp/yay
+cd $HDIR
+rm -rf $HDIR/tmp/yay
 # Run the Ansible playbook (optional)
 
-if [ -f myarch/playbook.yml ]; then
+if [ -f $HDIR/playbook.yml ]; then
     echo "Running the Ansible playbook..."
     ansible-playbook -i inventory playbook.yml --ask-become-pass
 else
