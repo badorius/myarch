@@ -48,9 +48,16 @@ cd $HDIR
 sudo rm -rf $HDIR/tmp/yay
 # Run the Ansible playbook (optional)
 
-if [ -f $PDIR/main_playbook.yml ]; then
+if [ -f $PDIR/install_pacman_pkg.yml ]; then
     echo "Running the Ansible playbook..."
     ansible-playbook -i inventory $PDIR/main_playbook.yml --ask-become-pass
+else
+    echo "Ansible playbook not found. Initial setup complete."
+fi
+
+if [ -f $PDIR/install_aur_pkg.yml ]; then
+    echo "Running the Ansible playbook..."
+    ansible-playbook -i inventory $PDIR/main_playbook.yml
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
