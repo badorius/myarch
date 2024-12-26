@@ -8,11 +8,21 @@ WDIR=$(pwd)
 HDIR=${WDIR}/myarch
 PDIR=${HDIR}/playbooks
 
+TSTMP=$(date +%s)
+
 # Check if myarch exist
 if [ -d "myarch" ]; then
   echo "Deleting myarch directory..."
   sudo rm -rf $WDIR/myarch
 fi
+
+#Enable multilib repo
+# Enable multilib repo
+sudo cp /etc/pacman.conf /etc/pacman.conf.backup.${TSTMP}
+mline=$(grep -n "\\[multilib\\]" /etc/pacman.conf | cut -d: -f1)
+rline=$(($mline + 1))
+sudo sed -i ''$mline's|#\[multilib\]|\[multilib\]|g' /etc/pacman.conf
+sudo sed -i ''$rline's|#Include = /etc/pacman.d/mirrorlist|Include = /etc/pacman.d/mirrorlist|g' /etc/pacman.conf
 
 # Install required packages
 echo "Installing basic packages..."
