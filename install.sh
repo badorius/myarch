@@ -40,7 +40,7 @@ sudo rm -rf $HDIR/tmp/yay
 
 if [ -f $PDIR/main_playbook.yml ]; then
     echo "Running the Ansible playbook..."
-    ansible-playbook -i localhost, $PDIR/playbook.yml --ask-become-pass
+    ansible-playbook -i localhost, $PDIR/main_playbook.yml --ask-become-pass
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
