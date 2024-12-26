@@ -10,7 +10,7 @@ HDIR=${WDIR}/myarch
 # Check if myarch exist
 if [ -d "myarch" ]; then
   echo "Deleting myarch directory..."
-  rm -rf $WDIR/myarch
+  sudo rm -rf $WDIR/myarch
 fi
 
 # Install required packages
