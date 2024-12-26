@@ -34,7 +34,7 @@ git clone https://aur.archlinux.org/yay.git $HDIR/tmp/yay
 cd $HDIR/tmp/yay
 makepkg -si --noconfirm
 cd $HDIR
-rm -rf $HDIR/tmp/yay
+sudo rm -rf $HDIR/tmp/yay
 # Run the Ansible playbook (optional)
 
 if [ -f $HDIR/playbook.yml ]; then
