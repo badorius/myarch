@@ -1,6 +1,8 @@
 ---
 - name: Configuración inicial de Arch Linux
   hosts: localhost
+  become: false
+
 
   vars_files:
     - ../ansible/vars/packages.yml
