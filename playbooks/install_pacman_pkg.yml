@@ -4,7 +4,7 @@
   become: true
 
   vars_files:
-    - packages.yml
+    - ../ansible/vars/packages.yml
 
   tasks:
     - name: Updating cache

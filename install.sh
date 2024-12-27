@@ -46,18 +46,26 @@ cd $HDIR/tmp/yay
 makepkg -si --noconfirm
 cd $HDIR
 sudo rm -rf $HDIR/tmp/yay
-# Run the Ansible playbook (optional)
+# Run the Ansible playbook 
+cd $PDIR
 
 if [ -f $PDIR/install_pacman_pkg.yml ]; then
-    echo "Running the Ansible playbook..."
+    echo "Running the Ansible playbook install pacman pkg..."
     ansible-playbook -i inventory $PDIR/install_pacman_pkg.yml --ask-become-pass
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
 
 if [ -f $PDIR/install_aur_pkg.yml ]; then
-    echo "Running the Ansible playbook..."
+    echo "Running the Ansible playbook install aur pkg..."
     ansible-playbook -i inventory $PDIR/install_aur_pkg.yml
+else
+    echo "Ansible playbook not found. Initial setup complete."
+fi
+
+if [ -f $PDIR/enable_services.yml ]; then
+    echo "Running the Ansible playbook enable and start services..."
+    ansible-playbook -i inventory $PDIR/enable_services.yml
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
