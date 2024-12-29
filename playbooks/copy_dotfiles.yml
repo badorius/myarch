@@ -1,0 +1,25 @@
+---
+- name: Copy dotfiles to destination
+  hosts: localhost
+  become: true
+
+  vars_files:
+    - ../ansible/vars/dotfiles.yml
+
+  tasks:
+    - name: Ensure dotfiles directory exists
+      file:
+        path: "{{ item.dest | dirname }}"
+        state: directory
+        mode: '0755'
+      loop: "{{ dotfiles }}"
+      when: item.dest | dirname != "~"
+
+    - name: Copy dotfiles
+      copy:
+        src: "../ansible/files/dotfiles/{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'
+      loop: "{{ dotfiles }}"

@@ -69,3 +69,10 @@ if [ -f $PDIR/enable_services.yml ]; then
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
+
+if [ -f $PDIR/copy_dotfiles.yml ]; then
+    echo "Running the Ansible playbook copy dotfiles..."
+    ansible-playbook -i inventory $PDIR/copy_dotfiles.yml
+else
+    echo "Ansible playbook not found. Initial setup complete."
+fi
