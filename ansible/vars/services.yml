@@ -1,5 +1,5 @@
 # ansible/vars/services.yml
 services:
   - sshd
-  - gdm
+  - lightdm
   - NetworkManager
