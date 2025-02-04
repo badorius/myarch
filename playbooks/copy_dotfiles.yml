@@ -17,7 +17,7 @@
 
     - name: Copy dotfiles
       copy:
-        src: "../ansible/files/{{ item.src }}"
+        src: "{{ playbook_dir }}/../ansible/files/{{ item.src }}"
         dest: "{{ item.dest }}"
         owner: "{{ ansible_user_id }}"
         group: "{{ ansible_user_id }}"
