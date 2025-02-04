@@ -1,7 +1,6 @@
 ---
 - name: Copy dotfiles to destination
   hosts: localhost
-  become: false
 
   vars_files:
     - ../ansible/vars/dotfiles.yml
@@ -14,8 +13,9 @@
         mode: '0755'
       loop: "{{ dotfiles }}"
       when: item.dest | dirname != "~"
+      become: "{{ item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') }}"
 
-    - name: Copy dotfiles
+    - name: Copy dotfiles (without become)
       copy:
         src: "{{ playbook_dir }}/../ansible/files/{{ item.src }}"
         dest: "{{ item.dest }}"
@@ -23,3 +23,16 @@
         group: "{{ ansible_user_id }}"
         mode: '0644'
       loop: "{{ dotfiles }}"
+      when: not (item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin'))
+
+    - name: Copy system-wide config files (with become)
+      copy:
+        src: "{{ playbook_dir }}/../ansible/files/{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: "root"
+        group: "root"
+        mode: '0644'
+      loop: "{{ dotfiles }}"
+      when: item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin')
+      become: true
+
