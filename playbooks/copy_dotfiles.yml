@@ -17,9 +17,9 @@
 
     - name: Copy dotfiles
       copy:
-        src: "../ansible/files/dotfiles/{{ item.src }}"
+        src: "../ansible/files/{{ item.src }}"
         dest: "{{ item.dest }}"
-        owner: "{{ ansible_user }}"
-        group: "{{ ansible_user }}"
+        owner: "{{ ansible_user_id }}"
+        group: "{{ ansible_user_id }}"
         mode: '0644'
       loop: "{{ dotfiles }}"
