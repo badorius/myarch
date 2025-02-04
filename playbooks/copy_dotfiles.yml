@@ -1,6 +1,7 @@
 ---
 - name: Copy dotfiles to destination
   hosts: localhost
+  become: false 
 
   vars_files:
     - ../ansible/vars/dotfiles.yml
