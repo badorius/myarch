@@ -42,6 +42,7 @@ pacman_packages:
   - pavucontrol
   - powerline
   - powerline-fonts
+  - sway
   - swaybg
   - swayidle
   - swaylock
@@ -79,4 +80,3 @@ yay_packages:
   - ttf-font-icons
   - ttf-meslo-nerd-font-powerlevel10k
   - zsh-theme-powerlevel10k-git
-  - swayfx
