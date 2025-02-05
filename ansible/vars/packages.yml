@@ -18,6 +18,7 @@ pacman_packages:
   - efibootmgr
   - ffmpeg4.4
   - firefox
+  - foot
   - git
   - htop
   - i3-wm
@@ -42,6 +43,7 @@ pacman_packages:
   - pavucontrol
   - powerline
   - powerline-fonts
+  - polkit
   - sway
   - swaybg
   - swayidle
@@ -69,6 +71,8 @@ pacman_packages:
   - mako
   - slurp
   - waybar
+  - sway-contrib
+  - xorg-xwayland
   - xdg-desktop-portal-gtk
   - xdg-desktop-portal-wlr 
 
