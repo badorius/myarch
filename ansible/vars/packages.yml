@@ -44,6 +44,7 @@ pacman_packages:
   - powerline
   - powerline-fonts
   - polkit
+  - ranger
   - sway
   - swaybg
   - swayidle
@@ -75,6 +76,23 @@ pacman_packages:
   - xorg-xwayland
   - xdg-desktop-portal-gtk
   - xdg-desktop-portal-wlr 
+  - ranger 
+  - atool 
+  - elinks 
+  - ffmpegthumbnailer 
+  - highlight 
+  - imagemagick 
+  - libcaca 
+  - lynx 
+  - mediainfo 
+  - odt2txt 
+  - perl-image-exiftool 
+  - poppler 
+  - python-chardet 
+  - python-pillow 
+  - transmission-cli 
+  - ueberzug 
+  - w3m
 
 
 yay_packages:
