@@ -201,8 +201,8 @@ bar {
 
 #####CUSTOM
 #bind for i3lock
-#bindsym $MOD+SHIFT+x exec i3lock -d -c 000000 
-bindsym $MOD+SHIFT+x exec "~/.local/bin/fuzzy_lock.sh"
+#bindsym $mod+SHIFT+x exec i3lock -d -c 000000 
+bindsym $mod+SHIFT+x exec "~/.local/bin/fuzzy_lock.sh"
 exec xautolock -time 15 -locker '~/.local/bin/fuzzy_lock.sh' &
 
 #bind for volumen
@@ -270,6 +270,6 @@ exec --no-startup-id /usr/bin/kdeconnect-app
 exec $HOME/scripts/i3/touchpad_tapping.sh
 
 #Bindkeys apps
-bindsym $MOD+SHIFT+f exec /usr/bin/firefox
-bindsym $MOD+SHIFT+t exec urxvt
-#bindsym $MOD+SHIFT+t exec alacritty 
+bindsym $mod+SHIFT+f exec /usr/bin/firefox
+bindsym $mod+SHIFT+t exec urxvt
+#bindsym $mod+SHIFT+t exec alacritty 
