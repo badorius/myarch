@@ -93,6 +93,7 @@ pacman_packages:
   - transmission-cli 
   - ueberzug 
   - w3m
+  - wallutils
 
 
 yay_packages:
