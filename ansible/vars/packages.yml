@@ -97,6 +97,7 @@ pacman_packages:
   - pulseaudio 
   - bemenu-wayland 
   - pulseaudio-bluetooth
+  - feh
 
 
 yay_packages:
