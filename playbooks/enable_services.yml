@@ -11,5 +11,5 @@
       systemd:
         name: "{{ item }}"
         enabled: true
-        state: started
+        #state: started
       loop: "{{ services }}"
