@@ -94,6 +94,9 @@ pacman_packages:
   - ueberzug 
   - w3m
   - wallutils
+  - pulseaudio 
+  - bemenu-wayland 
+  - pulseaudio-bluetooth
 
 
 yay_packages:
