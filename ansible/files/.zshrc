@@ -26,7 +26,8 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=(
-  "robbyrussell"
+  "nebirhos"
+  "sonicradish"
   "agnoster"
   "jonathan"
 )
