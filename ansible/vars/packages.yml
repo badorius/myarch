@@ -103,6 +103,8 @@ pacman_packages:
   - ruby
   - python-pygments
   - notification-daemon
+  - zsh-syntax-highlighting 
+  - zsh-autosuggestions
 
 
 yay_packages:
