@@ -34,6 +34,6 @@
         group: "root"
         mode: '0644'
       loop: "{{ dotfiles }}"
-      when: item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') or item.dest.startswith(/var/lib/AccountsService)
+      when: item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') or item.dest.startswith(/var/lib/AccountsService/users) or item.dest.startswith(/var/lib/AccountsService/icons)
       become: true
 
