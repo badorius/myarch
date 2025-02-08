@@ -1,5 +1,4 @@
 pacman_packages:
-  - alacritty
   - alsa-utils
   - amd-ucode
   - ansible
@@ -99,6 +98,10 @@ pacman_packages:
   - pulseaudio-bluetooth
   - feh
   - iw
+  - waybar 
+  - otf-font-awesome
+  - ruby
+  - python-pygments
 
 
 yay_packages:
@@ -107,4 +110,8 @@ yay_packages:
   - tempus-themes-kitty-git
   - ttf-font-icons
   - ttf-meslo-nerd-font-powerlevel10k
+  - oh-my-zsh-git 
+  - oh-myzsh-powerline-theme-git
   - zsh-theme-powerlevel10k-git
+  - oh-my-zsh-powerline-theme-git 
+  - bullet-train-oh-my-zsh-theme-git

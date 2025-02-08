@@ -2,6 +2,8 @@
 dotfiles:
   - src: ".bashrc"
     dest: "{{ ansible_user_dir }}/.bashrc"
+  - src: ".zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
   - src: ".tmux.conf"
     dest: "{{ ansible_user_dir }}/.tmux.conf"
   - src: ".vimrc"
