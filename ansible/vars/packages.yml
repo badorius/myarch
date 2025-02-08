@@ -102,6 +102,7 @@ pacman_packages:
   - otf-font-awesome
   - ruby
   - python-pygments
+  - notification-daemon
 
 
 yay_packages:
