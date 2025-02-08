@@ -1,5 +1,4 @@
 # The following lines were added by compinstall
-
 zstyle ':completion:*' completer _complete _ignored
 zstyle :compinstall filename '/home/darthv/.zshrc'
 
@@ -16,13 +15,13 @@ bindkey -v
 #START oh-my-zsh custom entries
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 export ZSH=/usr/share/oh-my-zsh/
+source $ZSH/oh-my-zsh.sh
 
 plugins=(
   git
   colorize
 )
 
-source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=(
@@ -33,3 +32,5 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 )
 
 ZSH_COLORIZE_STYLE="colorful"
+
+source $ZSH/oh-my-zsh.sh
