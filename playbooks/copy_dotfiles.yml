@@ -14,7 +14,7 @@
         mode: '0755'
       loop: "{{ dotfiles }}"
       when: item.dest | dirname != "~"
-      become: "{{ item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') }}"
+      become: "{{ item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') or item.dest.startswith('/var/lib/AccountsService') }}"
 
     - name: Copy dotfiles (without become)
       copy:
@@ -24,7 +24,7 @@
         group: "{{ ansible_user_id }}"
         mode: '0644'
       loop: "{{ dotfiles }}"
-      when: not (item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin'))
+      when: not (item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') or item.dest.startswith('/var/lib/AccountsService'))
 
     - name: Copy system-wide config files (with become)
       copy:
@@ -34,5 +34,5 @@
         group: "root"
         mode: '0644'
       loop: "{{ dotfiles }}"
-      when: item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') or item.dest.startswith(/var/lib/AccountsService/users) or item.dest.startswith(/var/lib/AccountsService/icons)
+      when: item.dest.startswith('/etc') or item.dest.startswith('/usr/local/bin') or item.dest.startswith('/var/lib/AccountsService') 
       become: true
