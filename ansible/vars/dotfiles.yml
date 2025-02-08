@@ -48,3 +48,7 @@ dotfiles:
     dest: "{{ ansible_user_dir }}/.config/"
   - src: "wallpapers"
     dest: "{{ ansible_user_dir }}/.config/"
+  - src: "darthv.png"
+    dest: "/var/lib/AccountsService/icons/darthv.png" 
+  - src: "darthv"
+    dest: "/var/lib/AccountsService/users/darthv" 
