@@ -30,6 +30,9 @@ pacman_packages:
   - libmp4v2
   - lightdm
   - lightdm-gtk-greeter
+  - lightdm-gtk-greeter-settings
+  - lightdm-webkit-theme-litarvan
+  - lightdm-webkit2-greeter
   - lightsoff
   - linux
   - linux-firmware
