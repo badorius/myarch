@@ -76,3 +76,5 @@ if [ -f $PDIR/copy_dotfiles.yml ]; then
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
+
+chsh -s $(which zsh)
