@@ -4,10 +4,10 @@
 set -e
 
 #ADD PATH VARS
-WDIR=$(pwd)
-HDIR=${WDIR}/myarch
-PDIR=${HDIR}/playbooks
-MUSER=$(whoami)
+export WDIR=$(pwd)
+export HDIR=${WDIR}/myarch
+export PDIR=${HDIR}/playbooks
+export MUSER=$(whoami)
 
 TSTMP=$(date +%s)
 
