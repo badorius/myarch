@@ -77,4 +77,4 @@ else
     echo "Ansible playbook not found. Initial setup complete."
 fi
 
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
