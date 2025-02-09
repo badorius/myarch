@@ -7,6 +7,7 @@ set -e
 WDIR=$(pwd)
 HDIR=${WDIR}/myarch
 PDIR=${HDIR}/playbooks
+MUSER=$(whoami)
 
 TSTMP=$(date +%s)
 
@@ -77,4 +78,4 @@ else
     echo "Ansible playbook not found. Initial setup complete."
 fi
 
-sudo chsh -s $(which zsh) darthv
+sudo chsh -s $(which zsh) $MUSER
