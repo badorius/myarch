@@ -47,6 +47,8 @@ pacman_packages:
   - powerline-fonts
   - polkit
   - ranger
+  - redshift
+  - scrot
   - sway
   - swaybg
   - swayidle
