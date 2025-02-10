@@ -4,9 +4,10 @@
 set -e
 
 #ADD PATH VARS
-WDIR=$(pwd)
-HDIR=${WDIR}/myarch
-PDIR=${HDIR}/playbooks
+export WDIR=$(pwd)
+export HDIR=${WDIR}/myarch
+export PDIR=${HDIR}/playbooks
+export MUSER=$(whoami)
 
 TSTMP=$(date +%s)
 
@@ -76,3 +77,5 @@ if [ -f $PDIR/copy_dotfiles.yml ]; then
 else
     echo "Ansible playbook not found. Initial setup complete."
 fi
+
+sudo chsh -s $(which zsh) $MUSER
