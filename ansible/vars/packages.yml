@@ -52,7 +52,6 @@ pacman_packages:
   - sway
   - swaybg
   - swayidle
-  - swaylock
   - telegram-desktop
   - tmux
   - ttf-font-awesome
@@ -123,3 +122,4 @@ yay_packages:
   - zsh-theme-powerlevel10k-git
   - oh-my-zsh-powerline-theme-git 
   - bullet-train-oh-my-zsh-theme-git
+  - swaylock-effects
