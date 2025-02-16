@@ -109,6 +109,11 @@ pacman_packages:
   - notification-daemon
   - zsh-syntax-highlighting 
   - zsh-autosuggestions
+  - dosfstools
+  - ntfs-3g
+  - qemu-full
+  - libvirt 
+  - nfs-utils
 
 
 yay_packages:
@@ -123,3 +128,5 @@ yay_packages:
   - oh-my-zsh-powerline-theme-git 
   - bullet-train-oh-my-zsh-theme-git
   - swaylock-effects
+  - wdisplays
+
