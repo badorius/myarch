@@ -20,8 +20,6 @@ dotfiles:
     dest: "{{ ansible_user_dir }}/.local/bin/fuzzy_lock.sh"
   - src: "hypr"
     dest: "{{ ansible_user_dir }}/.config/"
-  - src: "hypr"
-    dest: "{{ ansible_user_dir }}/.config/"
   - src: "i3"
     dest: "{{ ansible_user_dir }}/.config/"
   - src: "sway"

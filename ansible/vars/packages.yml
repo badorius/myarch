@@ -114,6 +114,24 @@ pacman_packages:
   - qemu-full
   - libvirt 
   - nfs-utils
+  - acpid 
+  - hdparm 
+  - sdparm 
+  - ethtool
+  - yprland 
+  - hyprgraphics 
+  - hypridle 
+  - hyprcursor 
+  - hyprlock 
+  - hyprland-protocols 
+  - hyprsunset 
+  - hyprutils 
+  - hyprwayland-scanner 
+  - nwg-displays 
+  - uwsm 
+  - glaze
+  - pamixer 
+  - playerctl
 
 
 yay_packages:
