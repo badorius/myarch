@@ -133,6 +133,7 @@ pacman_packages:
   - pamixer 
   - playerctl
   - android-tools
+  - hyprpaper
 
 
 yay_packages:
