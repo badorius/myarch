@@ -132,6 +132,7 @@ pacman_packages:
   - glaze
   - pamixer 
   - playerctl
+  - android-tools
 
 
 yay_packages:
