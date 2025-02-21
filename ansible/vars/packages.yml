@@ -134,6 +134,7 @@ pacman_packages:
   - playerctl
   - android-tools
   - hyprpaper
+  - polkit-kde-agent
 
 
 yay_packages:
