@@ -135,6 +135,7 @@ pacman_packages:
   - android-tools
   - hyprpaper
   - polkit-kde-agent
+  - thunar
 
 
 yay_packages:
