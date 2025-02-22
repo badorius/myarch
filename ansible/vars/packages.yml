@@ -138,6 +138,7 @@ pacman_packages:
   - thunar
   - dmidecode
   - blueman
+  - nwg-bar
 
 
 yay_packages:
