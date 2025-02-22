@@ -136,6 +136,7 @@ pacman_packages:
   - hyprpaper
   - polkit-kde-agent
   - thunar
+  - dmidecode
 
 
 yay_packages:

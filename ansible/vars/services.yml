@@ -2,3 +2,4 @@
 services:
   - lightdm
   - NetworkManager
+  - acpid
