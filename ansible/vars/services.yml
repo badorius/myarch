@@ -3,3 +3,5 @@ services:
   - lightdm
   - NetworkManager
   - acpid
+  - dbus
+  - bluetooth

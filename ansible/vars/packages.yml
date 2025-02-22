@@ -137,6 +137,7 @@ pacman_packages:
   - polkit-kde-agent
   - thunar
   - dmidecode
+  - blueman
 
 
 yay_packages:
