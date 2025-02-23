@@ -139,6 +139,7 @@ pacman_packages:
   - dmidecode
   - blueman
   - nwg-bar
+  - wireguard-tools
 
 
 yay_packages:
