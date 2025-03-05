@@ -140,6 +140,7 @@ pacman_packages:
   - blueman
   - nwg-bar
   - wireguard-tools
+  - net-tools
 
 
 yay_packages:
