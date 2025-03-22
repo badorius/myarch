@@ -141,6 +141,8 @@ pacman_packages:
   - nwg-bar
   - wireguard-tools
   - net-tools
+  - glances
+  - hddtemp
 
 
 yay_packages:
